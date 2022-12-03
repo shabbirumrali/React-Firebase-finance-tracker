@@ -1,4 +1,3 @@
-import styles from './Login.module.css';
 
 const Login = () => {
   return (
@@ -6,4 +5,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Login;
