@@ -1,6 +1,5 @@
 
 // styles
-import styles from './Home.module.css';
 
 const Home = () => {
   return (
@@ -8,4 +7,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;
