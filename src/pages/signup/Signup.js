@@ -1,4 +1,3 @@
-import styles from './Signup.module.css'
 
 const Signup = () => {
   return (
@@ -6,4 +5,4 @@ const Signup = () => {
   )
 }
 
-export default Signup
+export default Signup;
