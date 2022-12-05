@@ -8,10 +8,12 @@ const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
+  const { error, pending, signup } = useSignup();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password, name);
+
+    signup(email, password, name);
     setEmail('');
     setPassword('');
     setName('');
@@ -43,9 +45,8 @@ const Signup = () => {
           onChange={e => setName(e.target.value)}
         />
       </label>
-
-      <button className='btn'>Signup</button>  
-      
+      {pending ? <button className='btn' disabled>loading...</button> : <button className='btn'>Signup</button>}  
+      {error &&  "There is an error"}
     </form>
   )
 }
