@@ -16,9 +16,7 @@ const Navbar = () => {
             {user == null ? (<>
               <li><Link to="/login">Login</Link></li>
               <li><Link to="/signup">Signup</Link></li>
-            </>)
-            :
-            (<>
+            </>) : (<>
               <li className='display-name'>Hello, {user.displayName}</li>
               <li>
                 <button className='btn' onClick={logout}>Logout</button>
