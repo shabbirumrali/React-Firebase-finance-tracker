@@ -1,9 +1,13 @@
+import { useAuthContext } from '../../hooks/useAuthContext';
+
+// Compoenents
+import TransactionForm from './TransactionForm';
+
 // styles
 import styles from './Home.module.css';
-import TransactionForm from './TransactionForm';
-import { usefirestore } from '../../hooks/useFirestore';
 
 const Home = () => {
+  const { user } = useAuthContext()
   return (
     <div className={styles.container}>
         {/* C1 */}
@@ -12,7 +16,7 @@ const Home = () => {
         </div>
         {/* C2 */}
         <div className={styles.sidebar}>
-          <TransactionForm />
+          <TransactionForm uid={user.uid} />
         </div>
     </div>
   )
